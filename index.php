@@ -1,5 +1,5 @@
 <?php
-  $page = 'login';
+  $page = 'registration';
 
   include 'db/db.php';
 

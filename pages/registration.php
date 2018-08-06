@@ -9,7 +9,7 @@
                     <hr class="separator">
                 </div>
 
-                <form class="" action="#" method="post">
+                <form class="" action="?act=reg" method="post">
                   <input type="email" class="input-text" name="email" placeholder="Email*">
                   <input type="password" class="input-text" name="pwd" placeholder="Пароль*">
                   <input type="text" class="input-text" name="name" placeholder="Название компании*">
@@ -42,6 +42,7 @@
                   </select>
 
                   <input class="btn btn-primary btn-md btn-appear btn-cart-checkout highlight" type="submit" value="Отправить"/>
+                  <a href="?page=login" class="btn btn-primary btn-md btn-appear btn-cart-checkout highlight" style="color: #fff">Уже есть аккаунт</a>
                   <p class="small-print">Нажимая конпку "Отпрравить", я согласен с <a href="#" class="highlight">условиями пользовательского соглашения.</a></p>
                 </form>
             </div>

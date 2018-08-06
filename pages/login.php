@@ -5,7 +5,7 @@
 
             <div class="col-md-8 mr-auto text-center mt40 mb40">
                 <div class="section-heading">
-                    <h2>Партнерам</h2>
+                    <h2>Войти</h2>
                     <hr class="separator">
                 </div>
 

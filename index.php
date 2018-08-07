@@ -1,5 +1,10 @@
 <?php
-  $page = 'registration';
+
+  if(isset($_SESSION['id'])){
+    $page = 'profile';
+  }else{
+    $page = 'registration';
+  }
 
   include 'db/db.php';
 

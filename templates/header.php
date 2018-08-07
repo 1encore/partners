@@ -7,10 +7,10 @@
                   <?php
                   if(!isset($_SESSION['id'])) {
                   ?>
-                    <li><a href="?page=main#about" class="btn-scroll">О нас</a></li>
-                    <li><a href="?page=login" class="btn-scroll">Партнерам</a></li>
+                    <li><a href="https://www.fast-booking.kz/" class="btn-scroll">Главная</a></li>
+                    <li><a href="?page=login" class="btn-scroll">Войти</a></li>
                   <?php }else{ ?>
-                    <li><a href="?page=profile&com_id=<?php echo $_SESSION['id']; ?>" class="btn-scroll">Профиль</a></li>
+                    <li><a href="?page=profile" class="btn-scroll">Профиль</a></li>
                     <li><a href="?act=logout" class="btn-scroll">Выйти</a></li>
                   <?php } ?>
                 </ul>

@@ -12,7 +12,7 @@ if(isset($_GET['act'])){
       }
 
       $_SESSION['id'] = $row_login->id;
-      header('Location:index.php?page=profile&com_id='.$_SESSION['id'].'');
+      header('Location:index.php?page=profile');
     }else{
       // if authorization failed
       header('Location:index.php?page=login&error=1');

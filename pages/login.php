@@ -19,7 +19,11 @@
                 <?php
                 if(isset($_GET['error'])){
                 ?>
-                <p>неверный логин или пароль.</p>
+                <br><br>
+                <div class="alert alert-danger fade in">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="ion-ios-close-empty"></i></button>
+                  <i class="icon-genius"></i> <strong>Неверный логин или пароль.</strong>
+                </div>
                 <?php
                 }
                 ?>

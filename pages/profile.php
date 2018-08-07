@@ -1,7 +1,7 @@
 <?php
 if($connection->query("SET NAMES utf8")){
-  if(isset($_GET['com_id'])){
-    $com_id = $_GET['com_id'];
+  if(isset($_SESSION['id'])){
+    $com_id = $_SESSION['id'];
     $query_com = $connection->query("SELECT * FROM companies WHERE id = $com_id");
     if($row_com = $query_com->fetch_object()){
       if(isset($_GET['f_id'])){
@@ -181,7 +181,7 @@ if($connection->query("SET NAMES utf8")){
                       <?php
                         for($i = 0; $i < $row_com->field_count; $i++){
                       ?>
-                        <li><a href="#"><?php echo $i+1; ?></a></li>
+                        <li><a href="?page=profile&f_id=<?php echo $row_field->id ?>"><?php echo $i+1; ?></a></li>
                       <?php } ?>
                     </ul>
                 </div>

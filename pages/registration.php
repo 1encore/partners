@@ -9,6 +9,17 @@
                     <hr class="separator">
                 </div>
 
+                <?php
+                if(isset($_GET['error'])){
+                ?>
+                <div class="alert alert-danger fade in">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="ion-ios-close-empty"></i></button>
+                  <i class="icon-genius"></i> <strong>Данные заполнены не коректно.</strong>
+                </div>
+                <?php
+                }
+                ?>
+
                 <form class="" action="?act=reg" method="post">
                   <input type="email" class="input-text" name="email" placeholder="Email*">
                   <input type="password" class="input-text" name="pwd" placeholder="Пароль*">

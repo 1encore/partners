@@ -1,6 +1,6 @@
 <!-- Have to remove the $_GET['page']=='search') on alpha version -->
 <footer id="footer-1" style="
-  <?php if($_GET['page']=='login' || $_GET['page']=='search') echo 'position:absolute;' ?>
+  <?php if($_GET['page']=='login') echo 'position:absolute;' ?>
   left: 0;
   bottom: 0;
   width: 100%;

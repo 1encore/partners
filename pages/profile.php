@@ -27,8 +27,11 @@ if($connection->query("SET NAMES utf8")){
                         <h3 class="day">24</h3>
                         <span class="year">2016</span>
                     </div>
+                    <!-- Picture -->
                     <img src="img/blog/5.jpg" class="img-responsive width100" alt="#">
+                    <!-- Name -->
                     <a class="link-to-post" href="#"><h3><?php echo $row_com->name;?></h3></a>
+                    <!-- Coverage -->
                     <p class="blog-post-categories">
                         <span><i class="ion-ios-pricetags-outline"></i></span>
                         <?php
@@ -40,16 +43,8 @@ if($connection->query("SET NAMES utf8")){
                           <a href="#"><?php echo $row_type->cov; ?></a>
                         <?php } ?>
                     </p>
-                    <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites.</p>
-                    <p>Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. There are many variations of passages of Lorem Ipsum available, but the majority.</p>
-                    <p>Phasellus nibh tortor, varius vitae orci sit amet, placerat ornare quam. Nunc sapien risus, <strong>tictum id orci quis, rutrum cursus ipsum. Phasellus pellentesque ultricies pretium.</strong></p>
-
-                    <blockquote><p>Phasellus nibh tortor, varius vitae orci sit amet, placerat ornare quam. Nunc sapien risus, tictum id orci quis, rutrum cursus ipsum. ultricies pretium. Phasellus nibh tortor, varius vitae orci sit amet, <strong>placerat ornare quamm, nunc</strong> sapien risus, <strong>tictum id orci quis, rutrum</strong> cursus ipsum. Phasellus pellentesque ultricies pretium, placerat ornare quam</p></blockquote>
-
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo <a href="#">dolores et ea</a> rebum. Stet clita kasd gubergren, no sea takimata sanctus <a href="#">magna aliquyam erat</a>, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.<p>
-
-                    <p><em>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam at velit nisl. Aenean vitae est nisl. Cras molestie molestie nisl vel imperdiet. Donec vel mi sem.</em></p>
-
+                    <!-- Description -->
+                    <p><?php echo $row_com->descr; ?></p>
                 </div>
 
                 <!-- Bookings -->

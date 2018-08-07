@@ -13,13 +13,13 @@
   <link href="css/custom.css" rel="stylesheet" type="text/css">
   <link href="css/colors/orange.css" id="color-scheme" rel="stylesheet" type="text/css">
   <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=4onkxpb8ho5ouxcv8tgaia3spweoeoflkfi5l1piptqtsq7n"></script>
-  <script>
+  <!-- <script>
 	  tinymce.init({
 		  selector: "textarea",  // change this value according to your HTML
 		  toolbar: "image",
 		  plugins: "image imagetools"
 	  });
-</script>
+  </script> -->
   <script src="js/jquery.min.js"></script>
   <script>
     window.onscroll = function() {myFunction()};

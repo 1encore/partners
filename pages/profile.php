@@ -47,6 +47,7 @@ if($connection->query("SET NAMES utf8")){
                     <p><?php echo $row_com->descr; ?></p>
                 </div>
 
+
                 <!-- Bookings -->
                 <br>
                 <center><button class="btn btn-success" type="button" name="button" onclick="showBooking()" id="showButton">Брони</button></center>

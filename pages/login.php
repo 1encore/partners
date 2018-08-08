@@ -25,6 +25,14 @@
                   <i class="icon-genius"></i> <strong>Неверный логин или пароль.</strong>
                 </div>
                 <?php
+                }else if(isset($_GET['reg'])){
+                ?>
+                <br><br>
+                <div class="alert alert-success fade in">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="ion-ios-close-empty"></i></button>
+                  <i class="icon-happy"></i> <strong>Вы зарегестрированы.</strong>
+                </div>
+                <?php
                 }
                 ?>
             </div>

@@ -27,7 +27,7 @@ if(isset($_GET['act'])){
     $city = $_POST['city'];
     $dis = $_POST['district'];
 
-    if($connection->query("INSERT INTO companies VALUES(NULL, \"$name\", \"$email\", \"$pwd\", $city, $dis, \"$addr\", 1, 1, \"$phone\", 1, \"$descr\", 1)")){
+    if($connection->query("INSERT INTO companies VALUES(NULL, \"$name\", \"$email\", \"$pwd\", $city, $dis, \"$addr\", 1, 1, \"$phone\", 0, \"$descr\", 1)")){
       header('Location:index.php?page=login&reg=1');
     }else{
       header('Location:index.php?page=registration&error=1');

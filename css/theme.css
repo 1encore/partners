@@ -5018,7 +5018,7 @@ blockquote {
 
 /*--- Cart ---*/
 .cart {
-	padding-top: 130px;
+	padding-top: 100px;
 	padding-bottom: 60px;
 }
 .cart-total-items {
@@ -5027,8 +5027,8 @@ blockquote {
 	padding: 20px 0 0 0;
 }
 .cart-item a img {
-	width: 100%;
-	max-width: 200px;
+	width: 200px;
+	height: 150px;
 	float: left;
 	margin-right: 20px;
 }
@@ -5118,6 +5118,7 @@ blockquote {
 	letter-spacing: 1px;
 	margin-left: 0;
 	margin-top: 5px;
+	margin-bottom: 10px;
 	padding-top: 20px;
 	padding-bottom: 20px;
 }

@@ -3,7 +3,7 @@
   if(isset($_SESSION['id'])){
     $page = 'profile';
   }else{
-    $page = 'registration';
+    $page = 'login';
   }
 
   include 'db/db.php';

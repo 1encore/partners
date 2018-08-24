@@ -5,6 +5,70 @@ if($connection->query("SET NAMES utf8")){
     $query_com = $connection->query("SELECT * FROM companies WHERE id = $com_id");
     if($row_com = $query_com->fetch_object()){
 ?>
+<!-- Modal edit profile-->
+<div class="modal fade" id="editProfileModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Редактировать</h5>
+      </div>
+      <form class="form-group" action="?act=editProfile" method="post">
+        <div class="modal-body">
+        <?php
+        $query_selected_params = $connection->query("SELECT * FROM companies WHERE id = $com_id");
+        if($row_selected_params = $query_selected_params->fetch_object()){
+        ?>
+            <!-- <input type="email" class="form-control" name="email" placeholder="Email*" value="<?php echo $row_selected_params->email; ?>" required><br> -->
+            <input type="password" class="form-control" name="pwd" placeholder="Новый пароль"><br>
+            <input type="text" class="form-control" name="name" placeholder="Название компании*" value="<?php echo $row_selected_params->name; ?>" required><br>
+            <input type="text" class="form-control" name="addr" placeholder="Адрес*" value="<?php echo $row_selected_params->address; ?>" required><br>
+            <input type="number" class="form-control" name="phone" placeholder="Телефон* (Пример: 87071234567)" value="<?php echo $row_selected_params->phone; ?>" required><br>
+            <textarea name="descr" rows="8" cols="40" placeholder="Описание" required><?php echo $row_selected_params->descr; ?></textarea>
+            <select name="city" required>
+              <?php
+              $query_city = $connection->query("SELECT * FROM cities");
+              while($row_city = $query_city->fetch_object()){
+                if($row_city->id == $row_selected_params->city){
+              ?>
+                <option selected value="<?php echo $row_city->id; ?>"><?php echo $row_city->name; ?></option>
+              <?php
+                }else{
+              ?>
+                <option value="<?php echo $row_city->id; ?>"><?php echo $row_city->name; ?></option>
+              <?php
+                }
+              }
+              ?>
+            </select>
+
+            <select name="district">
+              <?php
+              $query_city = $connection->query("SELECT * FROM districts");
+              while($row_city = $query_city->fetch_object()){
+                if($row_city->id == $row_selected_params->city){
+              ?>
+                <option selected value="<?php echo $row_city->id; ?>"><?php echo $row_city->name; ?></option>
+              <?php
+                }else{
+              ?>
+                <option value="<?php echo $row_city->id; ?>"><?php echo $row_city->name; ?></option>
+              <?php
+                }
+              }
+              ?>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+            <button type="submit" class="btn btn-primary">Редактировать</button>
+          </div>
+        <?php
+        }
+        ?>
+      </form>
+    </div>
+  </div>
+</div>
 <!-- Modal Add-->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -181,7 +245,7 @@ if($connection->query("SET NAMES utf8")){
                         </tbody>
                     </table>
                 </div>
-                <a href="#" class="btn btn-primary btn-md btn-appear btn-cart-checkout"><span>Редактировать<i class="ion-ios-arrow-forward"></i></span></a>
+                <a href="#" class="btn btn-primary btn-md btn-appear btn-cart-checkout" data-toggle="modal" data-target="#editProfileModal"><span>Редактировать<i class="ion-ios-arrow-forward"></i></span></a>
             </div>
 
         </div>

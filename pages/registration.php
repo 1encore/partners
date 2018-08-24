@@ -11,12 +11,21 @@
 
                 <?php
                 if(isset($_GET['error'])){
+                  if($_GET['error'] == 1){
                 ?>
                 <div class="alert alert-danger fade in">
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="ion-ios-close-empty"></i></button>
                   <i class="icon-genius"></i> <strong>Данные заполнены не коректно.</strong>
                 </div>
                 <?php
+                  }else if($_GET['error'] == 2){
+                ?>
+                <div class="alert alert-danger fade in">
+                  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"><i class="ion-ios-close-empty"></i></button>
+                  <i class="icon-genius"></i> <strong>Пользователь с таким почтовым адресом уже существует.</strong>
+                </div>
+                <?php
+                  }
                 }
                 ?>
 
@@ -24,7 +33,7 @@
                   <input type="email" class="input-text" name="email" placeholder="Email*">
                   <input type="password" class="input-text" name="pwd" placeholder="Пароль*">
                   <input type="text" class="input-text" name="name" placeholder="Название компании*">
-                  <input type="text" class="input-text" name="addr" placeholder="Адресс*">
+                  <input type="text" class="input-text" name="addr" placeholder="Адрес*">
                   <input type="number" class="input-text" name="phone" placeholder="Телефон* (Пример: 87071234567)">
                   Описание:
                   <textarea name="descr" rows="8" cols="40" placeholder="Описание"></textarea>

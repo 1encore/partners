@@ -10,8 +10,8 @@
                 </div>
 
                 <form class="" action="?act=login" method="post">
-                  <input type="email" class="input-text" name="email" placeholder="E-mail адресс">
-                  <input type="password" class="input-text" name="pwd" placeholder="Пароль">
+                  <input type="email" class="input-text" name="email" placeholder="E-mail адресс" required>
+                  <input type="password" class="input-text" name="pwd" placeholder="Пароль" required>
 
                   <input class="btn btn-primary btn-md btn-appear btn-cart-checkout highlight" type="submit" value="Войти"/>
                 </form>
